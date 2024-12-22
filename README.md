@@ -30,8 +30,8 @@ At the minimum, you need:
 
 You need to set up `CameraStreamReader` to receive the video stream.
 
-1. `ScreenImage`: The `RawImage` that the footage will be drawn onto.
-2. `URL`: The local HTTP url that the camera feed is streamed from.
+1. `ScreenImage`: The `RawImage` that the footage will be drawn onto. By default, this is set to the `RawImage` component that comes within the provided prefab.
+2. `URL`: The local HTTP url that the camera feed is streamed from. By default, this is set to the URL that was used in debugging.
 3. `Chunk Size`: A stream contains endless data while it is running. You need to parse the stream data in chunks, and process each chunk as they come. This lets you determine how big of a chunk you want to process.
    * A chunk size that is too small will improve your game's FPS, with the cost of taking longer to receive images from the stream.
    * A chunk size that's too large will increase the chance of receiving full images per chunk, at the cost of FPS in your game.
